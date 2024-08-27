@@ -19,8 +19,9 @@ def train(train_dataloader, model, optimizer, epoch, batch_size, device, pretrai
 
     for i ,(imgs, gps) in bar:
 
+        gps = torch.stack(gps, dim=1).float()
         imgs = imgs.to(device)
-        gps = gps[0].to(device)
+        gps = gps.to(device)
         gps_queue = model.get_gps_queue()
 
         optimizer.zero_grad()
