@@ -60,12 +60,16 @@ class GeoDataLoader(Dataset):
         coordinates = []
 
         for _, row in tqdm(dataset_info.iterrows(), desc="Loading image paths and coordinates"):
-            filename = os.path.join(self.dataset_folder, row['IMG_FILE'])
+            filename = os.path.expanduser(row['IMG_FILE'])
             if exists(filename):
                 images.append(filename)
                 latitude = float(row['LAT'])
                 longitude = float(row['LON'])
                 coordinates.append((latitude, longitude))
+            else:
+                print(f"File not found: {filename}")
+        
+        print(f"Total images found: {len(images)}")
 
         return images, coordinates
 

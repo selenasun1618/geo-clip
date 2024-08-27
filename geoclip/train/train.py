@@ -2,17 +2,25 @@ import torch
 from torch import nn
 import torch.nn.functional as F
 from tqdm import tqdm
+import os
 
-def train(train_dataloader, model, optimizer, epoch, batch_size, device, scheduler=None, criterion=nn.CrossEntropyLoss()):
+def train(train_dataloader, model, optimizer, epoch, batch_size, device, pretrained_weights_dir=None, scheduler=None, criterion=nn.CrossEntropyLoss()):
+
     print("Starting Epoch", epoch)
+
+    if torch.cuda.is_available():
+       model.to("cuda")
+    else:
+        print("CUDA NOT AVAILABLE")
 
     bar = tqdm(enumerate(train_dataloader), total=len(train_dataloader))
 
     targets_img_gps = torch.Tensor([i for i in range(batch_size)]).long().to(device)
 
     for i ,(imgs, gps) in bar:
+
         imgs = imgs.to(device)
-        gps = gps.to(device)
+        gps = gps[0].to(device)
         gps_queue = model.get_gps_queue()
 
         optimizer.zero_grad()
