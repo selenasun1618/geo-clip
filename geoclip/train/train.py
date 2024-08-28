@@ -23,6 +23,14 @@ def train(train_dataloader, model, optimizer, epoch, batch_size, device, pretrai
         imgs = imgs.to(device)
         gps = gps.to(device)
         gps_queue = model.get_gps_queue()
+        current_batch_size = imgs.size(0)
+        
+        # Handle last batch if it's smaller than batch_size
+        if current_batch_size < batch_size:
+            # Pad the batch to reach batch_size
+            pad_size = batch_size - current_batch_size
+            imgs = F.pad(imgs, (0, 0, 0, 0, 0, 0, 0, pad_size))
+            gps = F.pad(gps, (0, 0, 0, pad_size))
 
         optimizer.zero_grad()
 
@@ -36,6 +44,10 @@ def train(train_dataloader, model, optimizer, epoch, batch_size, device, pretrai
         # Compute the loss
         img_gps_loss = criterion(logits_img_gps, targets_img_gps)
         loss = img_gps_loss
+        
+        # If padded, scale the loss
+        if current_batch_size < batch_size:
+            loss = loss * (current_batch_size / batch_size)
 
         # Backpropagate
         loss.backward()
