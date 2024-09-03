@@ -22,7 +22,7 @@ class GeoCLIP(nn.Module):
 
         if from_pretrained:
             self.weights_folder = os.path.join(file_dir, "weights")
-            self._load_weights()
+            self._load_weights(fine_tuned=True)
 
         self.device = "cpu"
 
@@ -36,9 +36,9 @@ class GeoCLIP(nn.Module):
     def _load_weights(self, fine_tuned=True):
 
         if fine_tuned:
-            image_encoder_path = "fine_tuned_image_encoder_mlp_weights.pth"
-            location_encoder_path = "fine_tuned_location_encoder_weights.pth"
-            logit_scale_path = "fine_tuned_logit_scale_weights.pth"
+            image_encoder_path = "fine_tuned_image_encoder_mlp_weights_08-29-02:48.pth"
+            location_encoder_path = "fine_tuned_location_encoder_weights_08-29-02:48.pth"
+            logit_scale_path = "fine_tuned_logit_scale_weights_08-29-02:48.pth"
         else:
             image_encoder_path = "image_encoder_mlp_weights.pth"
             location_encoder_path = "location_encoder_weights.pth"
