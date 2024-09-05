@@ -34,11 +34,10 @@ class GeoCLIP(nn.Module):
         return super().to(device)
 
     def _load_weights(self, fine_tuned=True):
-
         if fine_tuned:
-            image_encoder_path = "fine_tuned_image_encoder_mlp_weights_08-29-02:48.pth"
-            location_encoder_path = "fine_tuned_location_encoder_weights_08-29-02:48.pth"
-            logit_scale_path = "fine_tuned_logit_scale_weights_08-29-02:48.pth"
+            image_encoder_path = "fine_tuned_image_encoder_mlp_weights_09-05-02:44.pth"
+            location_encoder_path = "fine_tuned_location_encoder_weights_09-05-02:44.pth"
+            logit_scale_path = "fine_tuned_logit_scale_weights_09-05-02:44.pth"
         else:
             image_encoder_path = "image_encoder_mlp_weights.pth"
             location_encoder_path = "location_encoder_weights.pth"

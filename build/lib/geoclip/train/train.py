@@ -1,0 +1,61 @@
+import torch
+from torch import nn
+import torch.nn.functional as F
+from tqdm import tqdm
+import os
+import wandb
+
+def train(train_dataloader, model, optimizer, epoch, batch_size, device, pretrained_weights_dir=None, scheduler=None, criterion=nn.CrossEntropyLoss()):
+
+    print("Starting Epoch", epoch)
+
+    if torch.cuda.is_available():
+       model.to("cuda")
+    else:
+        print("CUDA NOT AVAILABLE")
+
+    bar = tqdm(enumerate(train_dataloader), total=len(train_dataloader))
+
+    targets_img_gps = torch.Tensor([i for i in range(batch_size)]).long().to(device)
+
+    for i ,(imgs, gps) in bar:
+
+        gps = torch.stack(gps, dim=1).float()
+        imgs = imgs.to(device)
+        gps = gps.to(device)
+        gps_queue = model.get_gps_queue()
+        current_batch_size = imgs.size(0)
+        
+        # Handle last batch if it's smaller than batch_size
+        if current_batch_size < batch_size:
+            # Pad the batch to reach batch_size
+            pad_size = batch_size - current_batch_size
+            imgs = F.pad(imgs, (0, 0, 0, 0, 0, 0, 0, pad_size))
+            gps = F.pad(gps, (0, 0, 0, pad_size))
+
+        optimizer.zero_grad()
+
+        # Append GPS Queue & Queue Update
+        gps_all = torch.cat([gps, gps_queue], dim=0)
+        model.dequeue_and_enqueue(gps)
+
+        # Forward pass
+        logits_img_gps = model(imgs, gps_all)
+
+        # Compute the loss
+        img_gps_loss = criterion(logits_img_gps, targets_img_gps)
+        loss = img_gps_loss
+        
+        # If padded, scale the loss
+        if current_batch_size < batch_size:
+            loss = loss * (current_batch_size / batch_size)
+
+        # Backpropagate
+        loss.backward()
+        optimizer.step()
+
+        bar.set_description("Epoch {} loss: {:.5f}".format(epoch, loss.item()))
+        wandb.log({"epoch": epoch, "loss": loss.item()})
+
+    if scheduler is not None:
+        scheduler.step()

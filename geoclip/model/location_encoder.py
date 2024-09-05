@@ -51,10 +51,15 @@ class LocationEncoder(nn.Module):
             self.add_module('LocEnc' + str(i), LocationEncoderCapsule(sigma=s))
 
         if from_pretrained:
-            self._load_weights()
+            self._load_weights(fine_tuned=True)
 
-    def _load_weights(self):
-        self.load_state_dict(torch.load(f"{file_dir}/weights/location_encoder_weights.pth"))
+    def _load_weights(self, fine_tuned=True):
+        if fine_tuned:
+            location_encoder_path = "fine_tuned_location_encoder_weights_08-29-02:48.pth"
+        else:
+            location_encoder_path = "location_encoder_weights.pth"
+
+        self.load_state_dict(torch.load(f"{file_dir}/weights/{location_encoder_path}"))
 
     def forward(self, location):
         location = equal_earth_projection(location)
