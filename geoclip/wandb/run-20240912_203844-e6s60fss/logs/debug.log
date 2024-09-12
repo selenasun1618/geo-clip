@@ -1,0 +1,39 @@
+2024-09-12 20:38:44,783 INFO    MainThread:3858502 [wandb_setup.py:_flush():77] Current SDK version is 0.17.8
+2024-09-12 20:38:44,784 INFO    MainThread:3858502 [wandb_setup.py:_flush():77] Configure stats pid to 3858502
+2024-09-12 20:38:44,784 INFO    MainThread:3858502 [wandb_setup.py:_flush():77] Loading settings from /home/ray/.config/wandb/settings
+2024-09-12 20:38:44,784 INFO    MainThread:3858502 [wandb_setup.py:_flush():77] Loading settings from /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/settings
+2024-09-12 20:38:44,785 WARNING MainThread:3858502 [wandb_setup.py:_flush():77] Unknown environment variable: WANDB_POPULATE_RUN_LOCATION_HOOK
+2024-09-12 20:38:44,785 WARNING MainThread:3858502 [wandb_setup.py:_flush():77] Unknown environment variable: WANDB_SETUP_API_KEY_HOOK
+2024-09-12 20:38:44,786 WARNING MainThread:3858502 [wandb_setup.py:_flush():77] Unknown environment variable: WANDB_PROCESS_RUN_INFO_HOOK
+2024-09-12 20:38:44,786 INFO    MainThread:3858502 [wandb_setup.py:_flush():77] Loading settings from environment variables: {}
+2024-09-12 20:38:44,786 INFO    MainThread:3858502 [wandb_setup.py:_flush():77] Applying setup settings: {'_disable_service': False}
+2024-09-12 20:38:44,787 INFO    MainThread:3858502 [wandb_setup.py:_flush():77] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-09-12 20:38:44,787 INFO    MainThread:3858502 [wandb_setup.py:_flush():77] Applying login settings: {}
+2024-09-12 20:38:44,787 INFO    MainThread:3858502 [wandb_init.py:_log_setup():524] Logging user logs to /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/run-20240912_203844-e6s60fss/logs/debug.log
+2024-09-12 20:38:44,788 INFO    MainThread:3858502 [wandb_init.py:_log_setup():525] Logging internal logs to /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/run-20240912_203844-e6s60fss/logs/debug-internal.log
+2024-09-12 20:38:44,788 INFO    MainThread:3858502 [wandb_init.py:_jupyter_setup():470] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x762b50646e90>
+2024-09-12 20:38:44,789 INFO    MainThread:3858502 [wandb_init.py:init():607] calling init triggers
+2024-09-12 20:38:44,789 INFO    MainThread:3858502 [wandb_init.py:init():614] wandb.init called with sweep_config: {}
+config: {'learning_rate': {0.0001}, 'step_size': {30}, 'epochs': {10}, 'optimizer_gamma': {0.1}}
+2024-09-12 20:38:44,790 INFO    MainThread:3858502 [wandb_init.py:init():657] starting backend
+2024-09-12 20:38:44,790 INFO    MainThread:3858502 [wandb_init.py:init():661] setting up manager
+2024-09-12 20:38:44,793 INFO    MainThread:3858502 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-09-12 20:38:44,794 INFO    MainThread:3858502 [wandb_init.py:init():669] backend started and connected
+2024-09-12 20:38:44,798 INFO    MainThread:3858502 [wandb_run.py:_label_probe_notebook():1344] probe notebook
+2024-09-12 20:38:44,798 INFO    MainThread:3858502 [wandb_run.py:_label_probe_notebook():1354] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2024-09-12 20:38:44,799 INFO    MainThread:3858502 [wandb_init.py:init():767] updated telemetry
+2024-09-12 20:38:44,813 INFO    MainThread:3858502 [wandb_init.py:init():800] communicating run to backend with 90.0 second timeout
+2024-09-12 20:38:46,071 INFO    MainThread:3858502 [wandb_init.py:init():851] starting run threads in backend
+2024-09-12 20:38:49,824 INFO    MainThread:3858502 [wandb_run.py:_console_start():2463] atexit reg
+2024-09-12 20:38:49,824 INFO    MainThread:3858502 [wandb_run.py:_redirect():2309] redirect: wrap_raw
+2024-09-12 20:38:49,825 INFO    MainThread:3858502 [wandb_run.py:_redirect():2374] Wrapping output streams.
+2024-09-12 20:38:49,825 INFO    MainThread:3858502 [wandb_run.py:_redirect():2399] Redirects installed.
+2024-09-12 20:38:49,827 INFO    MainThread:3858502 [wandb_init.py:init():894] run started, returning control to user process
+2024-09-12 20:38:49,830 INFO    MainThread:3858502 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-09-12 20:38:49,831 INFO    MainThread:3858502 [wandb_init.py:_pause_backend():435] pausing backend
+2024-09-12 20:38:49,841 INFO    MainThread:3858502 [wandb_init.py:_resume_backend():440] resuming backend
+2024-09-12 20:38:49,844 INFO    MainThread:3858502 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-09-12 20:38:49,844 INFO    MainThread:3858502 [wandb_init.py:_pause_backend():435] pausing backend
+2024-09-12 20:40:10,413 INFO    MainThread:3858502 [wandb_init.py:_resume_backend():440] resuming backend
+2024-09-12 20:40:10,417 INFO    MainThread:3858502 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-09-12 20:40:10,418 INFO    MainThread:3858502 [wandb_init.py:_pause_backend():435] pausing backend
