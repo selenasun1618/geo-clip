@@ -1,0 +1,127 @@
+{
+    "os": "Linux-6.5.0-1023-aws-x86_64-with-glibc2.35",
+    "python": "3.11.8",
+    "heartbeatAt": "2024-09-12T20:35:10.931386",
+    "startedAt": "2024-09-12T20:35:10.601359",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "codePathLocal": null,
+    "git": {
+        "remote": "https://github.com/selenasun1618/geo-clip.git",
+        "commit": "80b1b81f02c3f35f061dfb53eeb4b0543fe92a62"
+    },
+    "email": "selenasun02@gmail.com",
+    "root": "/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip",
+    "host": "ip-172-128-222-14",
+    "username": "ray",
+    "executable": "/home/ray/anaconda3/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3099.9899375,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3100.096,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3099.927,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3099.927,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3100.32,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3100.145,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3099.831,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3099.783,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3099.891,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3099.807,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3100.314,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3099.882,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3100.055,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3100.592,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3099.82,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3099.924,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3099.648,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 145.1909637451172,
+            "used": 29.812213897705078
+        }
+    },
+    "gpu": "Tesla T4",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Tesla T4",
+            "memory_total": 16106127360
+        }
+    ],
+    "memory": {
+        "total": 62.093772888183594
+    }
+}

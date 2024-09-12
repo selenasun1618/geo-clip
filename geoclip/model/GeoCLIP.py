@@ -17,7 +17,7 @@ class GeoCLIP(nn.Module):
         self.image_encoder = ImageEncoder()
         self.location_encoder = LocationEncoder()
 
-        self.gps_gallery = load_gps_data(os.path.join(file_dir, "gps_gallery", "coordinates_100K.csv"))
+        self.gps_gallery = load_gps_data(os.path.join(file_dir, "gps_gallery", "coordinates_ukraine_russia.csv"))
         self._initialize_gps_queue(queue_size)
 
         if from_pretrained:
