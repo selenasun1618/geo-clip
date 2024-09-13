@@ -11,18 +11,19 @@ from PIL import Image
 from torchvision.transforms import ToPILImage
 
 class GeoCLIP(nn.Module):
-    def __init__(self, from_pretrained=True, queue_size=4096):
+    def __init__(self, timestamp, from_pretrained=True, queue_size=4096):
         super().__init__()
         self.logit_scale = nn.Parameter(torch.ones([]) * np.log(1 / 0.07))
         self.image_encoder = ImageEncoder()
         self.location_encoder = LocationEncoder()
+        self.timestamp = timestamp
 
         self.gps_gallery = load_gps_data(os.path.join(file_dir, "gps_gallery", "coordinates_ukraine_russia.csv"))
         self._initialize_gps_queue(queue_size)
 
         if from_pretrained:
             self.weights_folder = os.path.join(file_dir, "weights")
-            self._load_weights(fine_tuned=True)
+            self._load_weights(epochs=True)
 
         self.device = "cpu"
 
@@ -33,19 +34,25 @@ class GeoCLIP(nn.Module):
         self.logit_scale.data = self.logit_scale.data.to(device)
         return super().to(device)
 
-    def _load_weights(self, fine_tuned=True):
-        if fine_tuned:
-            image_encoder_path = "fine_tuned_image_encoder_mlp_weights_09-05-02:44.pth"
-            location_encoder_path = "fine_tuned_location_encoder_weights_09-05-02:44.pth"
-            logit_scale_path = "fine_tuned_logit_scale_weights_09-05-02:44.pth"
+    def _load_weights(self, epochs=False):
+        
+        if self.timestamp:
+            image_encoder_path = f"fine_tuned_image_encoder_mlp_weights_{self.timestamp}.pth"
+            location_encoder_path = f"fine_tuned_location_encoder_weights_{self.timestamp}.pth"
+            logit_scale_path = f"fine_tuned_logit_scale_weights_{self.timestamp}.pth"
         else:
             image_encoder_path = "image_encoder_mlp_weights.pth"
             location_encoder_path = "location_encoder_weights.pth"
             logit_scale_path = "logit_scale_weights.pth"
 
-        self.image_encoder.mlp.load_state_dict(torch.load(f"{self.weights_folder}/{image_encoder_path}"))
-        self.location_encoder.load_state_dict(torch.load(f"{self.weights_folder}/{location_encoder_path}"))
-        self.logit_scale = nn.Parameter(torch.load(f"{self.weights_folder}/{logit_scale_path}"))
+        if epochs:
+            self.image_encoder.mlp.load_state_dict(torch.load(f"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/snapshots/{image_encoder_path}"))
+            self.location_encoder.load_state_dict(torch.load(f"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/snapshots/{location_encoder_path}"))
+            self.logit_scale = nn.Parameter(torch.load(f"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/snapshots/{logit_scale_path}"))
+        else:
+            self.image_encoder.mlp.load_state_dict(torch.load(f"{self.weights_folder}/{image_encoder_path}"))
+            self.location_encoder.load_state_dict(torch.load(f"{self.weights_folder}/{location_encoder_path}"))
+            self.logit_scale = nn.Parameter(torch.load(f"{self.weights_folder}/{logit_scale_path}"))
 
     def _initialize_gps_queue(self, queue_size):
         self.queue_size = queue_size

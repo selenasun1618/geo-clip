@@ -1,0 +1,2347 @@
+
+Starting Epoch 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0 loss: 4.74431: 100%|█████████▉| 476/477 [11:06<00:01,  1.40s/it]
+Epoch 0 loss: 0.45360: 100%|██████████| 477/477 [11:07<00:00,  1.40s/it]
+/home/ray/anaconda3/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/location_encoder.py:62: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(f"{file_dir}/weights/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:46: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.image_encoder.mlp.load_state_dict(torch.load(f"{self.weights_folder}/{image_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:47: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.location_encoder.load_state_dict(torch.load(f"{self.weights_folder}/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:48: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.logit_scale = nn.Parameter(torch.load(f"{self.weights_folder}/{logit_scale_path}"))
+Average Error (km): 838.556603266381
+Prediction accuracies saved to /home/ray/mnt/cluster_storage/ai_geolocation/eyesonrussia/eyesonrussia_finetuned_geoclip_predictions_09-12-22:00
+count: 578.00
+mean: 838.56
+std: 1452.46
+min: 4.43
+max: 9362.38
+25%: 246.97
+50%: 459.72
+75%: 754.47
+1km Accuracy: 0.00
+25km Accuracy: 0.02
+200km Accuracy: 0.17
+750km Accuracy: 0.75
+2500km Accuracy: 0.93
+count: 578.00
+mean: 0.06
+std: 0.08
+min: 0.00
+max: 0.65
+25%: 0.01
+50%: 0.03
+75%: 0.08
+gps_gallery: /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/gps_gallery/coordinates_ukraine_russia.csv
+/home/ray/anaconda3/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/location_encoder.py:62: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(f"{file_dir}/weights/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:46: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.image_encoder.mlp.load_state_dict(torch.load(f"{self.weights_folder}/{image_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:47: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.location_encoder.load_state_dict(torch.load(f"{self.weights_folder}/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:48: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.logit_scale = nn.Parameter(torch.load(f"{self.weights_folder}/{logit_scale_path}"))
+Average Error (km): 90.15834330565109
+Prediction accuracies saved to /home/ray/mnt/cluster_storage/ai_geolocation/googlestreetview/googlestreetview_finetuned_predictions_09-12-22:00
+count: 3232.00
+mean: 90.16
+std: 420.24
+min: 0.00
+max: 3481.21
+25%: 0.06
+50%: 0.15
+75%: 0.83
+1km Accuracy: 0.76
+25km Accuracy: 0.93
+200km Accuracy: 0.93
+750km Accuracy: 0.94
+2500km Accuracy: 0.99
+count: 3232.00
+mean: 0.01
+std: 0.01
+min: 0.00
+max: 0.11
+25%: 0.00
+50%: 0.01
+75%: 0.01
+Saved snapshot for epoch 0
+Starting Epoch 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 1 loss: 4.09798:  87%|████████▋ | 417/477 [09:43<01:23,  1.40s/it]Exception in thread SockSrvRdThr:
+Traceback (most recent call last):
+  File "/home/ray/anaconda3/lib/python3.11/threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "/home/ray/anaconda3/lib/python3.11/site-packages/wandb/sdk/service/server_sock.py", line 99, in run
+    sreq = self._sock_client.read_server_request()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ray/anaconda3/lib/python3.11/site-packages/wandb/sdk/lib/sock_client.py", line 274, in read_server_request
+    data = self._read_packet_bytes()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ray/anaconda3/lib/python3.11/site-packages/wandb/sdk/lib/sock_client.py", line 248, in _read_packet_bytes
+    rec = self._extract_packet_bytes()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ray/anaconda3/lib/python3.11/site-packages/wandb/sdk/lib/sock_client.py", line 230, in _extract_packet_bytes
+    assert magic == ord("W")
+           ^^^^^^^^^^^^^^^^^
+AssertionError
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 1 loss: 0.43233: 100%|██████████| 477/477 [11:07<00:00,  1.40s/it]
+/home/ray/anaconda3/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+gps_gallery: /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/gps_gallery/coordinates_ukraine_russia.csv
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/location_encoder.py:62: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(f"{file_dir}/weights/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:46: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.image_encoder.mlp.load_state_dict(torch.load(f"{self.weights_folder}/{image_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:47: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.location_encoder.load_state_dict(torch.load(f"{self.weights_folder}/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:48: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.logit_scale = nn.Parameter(torch.load(f"{self.weights_folder}/{logit_scale_path}"))
+/home/ray/anaconda3/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Average Error (km): 838.556603266381
+Prediction accuracies saved to /home/ray/mnt/cluster_storage/ai_geolocation/eyesonrussia/eyesonrussia_finetuned_geoclip_predictions_09-12-22:00
+count: 578.00
+mean: 838.56
+std: 1452.46
+min: 4.43
+max: 9362.38
+25%: 246.97
+50%: 459.72
+75%: 754.47
+1km Accuracy: 0.00
+25km Accuracy: 0.02
+200km Accuracy: 0.17
+750km Accuracy: 0.75
+2500km Accuracy: 0.93
+count: 578.00
+mean: 0.06
+std: 0.08
+min: 0.00
+max: 0.65
+25%: 0.01
+50%: 0.03
+75%: 0.08
+gps_gallery: /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/gps_gallery/coordinates_ukraine_russia.csv
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/location_encoder.py:62: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(f"{file_dir}/weights/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:46: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.image_encoder.mlp.load_state_dict(torch.load(f"{self.weights_folder}/{image_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:47: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.location_encoder.load_state_dict(torch.load(f"{self.weights_folder}/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:48: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.logit_scale = nn.Parameter(torch.load(f"{self.weights_folder}/{logit_scale_path}"))
+  0%|          | 0/477 [00:00<?, ?it/s]
+Average Error (km): 90.15834330565109
+Prediction accuracies saved to /home/ray/mnt/cluster_storage/ai_geolocation/googlestreetview/googlestreetview_finetuned_predictions_09-12-22:00
+count: 3232.00
+mean: 90.16
+std: 420.24
+min: 0.00
+max: 3481.21
+25%: 0.06
+50%: 0.15
+75%: 0.83
+1km Accuracy: 0.76
+25km Accuracy: 0.93
+200km Accuracy: 0.93
+750km Accuracy: 0.94
+2500km Accuracy: 0.99
+count: 3232.00
+mean: 0.01
+std: 0.01
+min: 0.00
+max: 0.11
+25%: 0.00
+50%: 0.01
+75%: 0.01
+Saved snapshot for epoch 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 2 loss: 0.43018: 100%|██████████| 477/477 [11:05<00:00,  1.39s/it]
+/home/ray/anaconda3/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/location_encoder.py:62: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(f"{file_dir}/weights/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:46: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.image_encoder.mlp.load_state_dict(torch.load(f"{self.weights_folder}/{image_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:47: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.location_encoder.load_state_dict(torch.load(f"{self.weights_folder}/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:48: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.logit_scale = nn.Parameter(torch.load(f"{self.weights_folder}/{logit_scale_path}"))
+gps_gallery: /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/gps_gallery/coordinates_ukraine_russia.csv
+Average Error (km): 838.556603266381
+Prediction accuracies saved to /home/ray/mnt/cluster_storage/ai_geolocation/eyesonrussia/eyesonrussia_finetuned_geoclip_predictions_09-12-22:00
+count: 578.00
+mean: 838.56
+std: 1452.46
+min: 4.43
+max: 9362.38
+25%: 246.97
+50%: 459.72
+75%: 754.47
+1km Accuracy: 0.00
+25km Accuracy: 0.02
+200km Accuracy: 0.17
+750km Accuracy: 0.75
+2500km Accuracy: 0.93
+count: 578.00
+mean: 0.06
+std: 0.08
+min: 0.00
+max: 0.65
+25%: 0.01
+50%: 0.03
+75%: 0.08
+/home/ray/anaconda3/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/location_encoder.py:62: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(f"{file_dir}/weights/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:46: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.image_encoder.mlp.load_state_dict(torch.load(f"{self.weights_folder}/{image_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:47: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.location_encoder.load_state_dict(torch.load(f"{self.weights_folder}/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:48: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.logit_scale = nn.Parameter(torch.load(f"{self.weights_folder}/{logit_scale_path}"))
+gps_gallery: /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/gps_gallery/coordinates_ukraine_russia.csv
+  0%|          | 0/477 [00:00<?, ?it/s]
+Average Error (km): 90.15834330565109
+Prediction accuracies saved to /home/ray/mnt/cluster_storage/ai_geolocation/googlestreetview/googlestreetview_finetuned_predictions_09-12-22:00
+count: 3232.00
+mean: 90.16
+std: 420.24
+min: 0.00
+max: 3481.21
+25%: 0.06
+50%: 0.15
+75%: 0.83
+1km Accuracy: 0.76
+25km Accuracy: 0.93
+200km Accuracy: 0.93
+750km Accuracy: 0.94
+2500km Accuracy: 0.99
+count: 3232.00
+mean: 0.01
+std: 0.01
+min: 0.00
+max: 0.11
+25%: 0.00
+50%: 0.01
+75%: 0.01
+Saved snapshot for epoch 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 3 loss: 0.40854: 100%|██████████| 477/477 [11:03<00:00,  1.39s/it]
+/home/ray/anaconda3/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/location_encoder.py:62: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(f"{file_dir}/weights/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:46: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.image_encoder.mlp.load_state_dict(torch.load(f"{self.weights_folder}/{image_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:47: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.location_encoder.load_state_dict(torch.load(f"{self.weights_folder}/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:48: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.logit_scale = nn.Parameter(torch.load(f"{self.weights_folder}/{logit_scale_path}"))
+gps_gallery: /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/gps_gallery/coordinates_ukraine_russia.csv
+Average Error (km): 838.556603266381
+Prediction accuracies saved to /home/ray/mnt/cluster_storage/ai_geolocation/eyesonrussia/eyesonrussia_finetuned_geoclip_predictions_09-12-22:00
+count: 578.00
+mean: 838.56
+std: 1452.46
+min: 4.43
+max: 9362.38
+25%: 246.97
+50%: 459.72
+75%: 754.47
+1km Accuracy: 0.00
+25km Accuracy: 0.02
+200km Accuracy: 0.17
+750km Accuracy: 0.75
+2500km Accuracy: 0.93
+count: 578.00
+mean: 0.06
+std: 0.08
+min: 0.00
+max: 0.65
+25%: 0.01
+50%: 0.03
+75%: 0.08
+/home/ray/anaconda3/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/location_encoder.py:62: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(f"{file_dir}/weights/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:46: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.image_encoder.mlp.load_state_dict(torch.load(f"{self.weights_folder}/{image_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:47: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.location_encoder.load_state_dict(torch.load(f"{self.weights_folder}/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:48: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.logit_scale = nn.Parameter(torch.load(f"{self.weights_folder}/{logit_scale_path}"))
+gps_gallery: /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/gps_gallery/coordinates_ukraine_russia.csv
+  0%|          | 0/477 [00:00<?, ?it/s]
+Average Error (km): 90.15834330565109
+Prediction accuracies saved to /home/ray/mnt/cluster_storage/ai_geolocation/googlestreetview/googlestreetview_finetuned_predictions_09-12-22:00
+count: 3232.00
+mean: 90.16
+std: 420.24
+min: 0.00
+max: 3481.21
+25%: 0.06
+50%: 0.15
+75%: 0.83
+1km Accuracy: 0.76
+25km Accuracy: 0.93
+200km Accuracy: 0.93
+750km Accuracy: 0.94
+2500km Accuracy: 0.99
+count: 3232.00
+mean: 0.01
+std: 0.01
+min: 0.00
+max: 0.11
+25%: 0.00
+50%: 0.01
+75%: 0.01
+Saved snapshot for epoch 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 4 loss: 0.42268: 100%|██████████| 477/477 [11:01<00:00,  1.39s/it]
+/home/ray/anaconda3/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/location_encoder.py:62: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(f"{file_dir}/weights/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:46: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.image_encoder.mlp.load_state_dict(torch.load(f"{self.weights_folder}/{image_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:47: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.location_encoder.load_state_dict(torch.load(f"{self.weights_folder}/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:48: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.logit_scale = nn.Parameter(torch.load(f"{self.weights_folder}/{logit_scale_path}"))
+gps_gallery: /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/gps_gallery/coordinates_ukraine_russia.csv
+Average Error (km): 838.556603266381
+Prediction accuracies saved to /home/ray/mnt/cluster_storage/ai_geolocation/eyesonrussia/eyesonrussia_finetuned_geoclip_predictions_09-12-22:00
+count: 578.00
+mean: 838.56
+std: 1452.46
+min: 4.43
+max: 9362.38
+25%: 246.97
+50%: 459.72
+75%: 754.47
+1km Accuracy: 0.00
+25km Accuracy: 0.02
+200km Accuracy: 0.17
+750km Accuracy: 0.75
+2500km Accuracy: 0.93
+count: 578.00
+mean: 0.06
+std: 0.08
+min: 0.00
+max: 0.65
+25%: 0.01
+50%: 0.03
+75%: 0.08
+/home/ray/anaconda3/lib/python3.11/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/location_encoder.py:62: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(f"{file_dir}/weights/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:46: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.image_encoder.mlp.load_state_dict(torch.load(f"{self.weights_folder}/{image_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:47: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.location_encoder.load_state_dict(torch.load(f"{self.weights_folder}/{location_encoder_path}"))
+/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/GeoCLIP.py:48: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.logit_scale = nn.Parameter(torch.load(f"{self.weights_folder}/{logit_scale_path}"))
+gps_gallery: /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/model/gps_gallery/coordinates_ukraine_russia.csv
+  0%|          | 0/477 [00:00<?, ?it/s]
+Average Error (km): 90.15834330565109
+Prediction accuracies saved to /home/ray/mnt/cluster_storage/ai_geolocation/googlestreetview/googlestreetview_finetuned_predictions_09-12-22:00
+count: 3232.00
+mean: 90.16
+std: 420.24
+min: 0.00
+max: 3481.21
+25%: 0.06
+50%: 0.15
+75%: 0.83
+1km Accuracy: 0.76
+25km Accuracy: 0.93
+200km Accuracy: 0.93
+750km Accuracy: 0.94
+2500km Accuracy: 0.99
+count: 3232.00
+mean: 0.01
+std: 0.01
+min: 0.00
+max: 0.11
+25%: 0.00
+50%: 0.01
+75%: 0.01
+Saved snapshot for epoch 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 5 loss: 4.87825:  48%|████▊     | 227/477 [05:14<05:46,  1.38s/it]Exception in thread SockSrvRdThr:
+Traceback (most recent call last):
+  File "/home/ray/anaconda3/lib/python3.11/threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "/home/ray/anaconda3/lib/python3.11/site-packages/wandb/sdk/service/server_sock.py", line 99, in run
+    sreq = self._sock_client.read_server_request()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ray/anaconda3/lib/python3.11/site-packages/wandb/sdk/lib/sock_client.py", line 274, in read_server_request
+    data = self._read_packet_bytes()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ray/anaconda3/lib/python3.11/site-packages/wandb/sdk/lib/sock_client.py", line 248, in _read_packet_bytes
+    rec = self._extract_packet_bytes()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ray/anaconda3/lib/python3.11/site-packages/wandb/sdk/lib/sock_client.py", line 230, in _extract_packet_bytes
+    assert magic == ord("W")
+           ^^^^^^^^^^^^^^^^^
+AssertionError
+Epoch 5 loss: 4.54274:  48%|████▊     | 230/477 [05:18<05:41,  1.38s/it]
+Epoch 5 loss: 4.04469:  48%|████▊     | 231/477 [05:20<05:40,  1.38s/it]
+Epoch 5 loss: 4.04604:  49%|████▊     | 232/477 [05:21<05:39,  1.38s/it]
+Epoch 5 loss: 4.36213:  49%|████▉     | 234/477 [05:24<05:36,  1.38s/it]
+Epoch 5 loss: 4.30360:  49%|████▉     | 235/477 [05:25<05:35,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]
+Epoch 5 loss: 4.07645:  50%|████▉     | 237/477 [05:28<05:32,  1.39s/it]

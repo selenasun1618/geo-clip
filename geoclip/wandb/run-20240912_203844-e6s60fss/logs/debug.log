@@ -37,3 +37,61 @@ config: {'learning_rate': {0.0001}, 'step_size': {30}, 'epochs': {10}, 'optimize
 2024-09-12 20:40:10,413 INFO    MainThread:3858502 [wandb_init.py:_resume_backend():440] resuming backend
 2024-09-12 20:40:10,417 INFO    MainThread:3858502 [jupyter.py:save_ipynb():372] not saving jupyter notebook
 2024-09-12 20:40:10,418 INFO    MainThread:3858502 [wandb_init.py:_pause_backend():435] pausing backend
+2024-09-12 20:41:40,900 INFO    MainThread:3858502 [wandb_init.py:_resume_backend():440] resuming backend
+2024-09-12 20:52:50,617 INFO    MainThread:3858502 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-09-12 20:52:50,617 INFO    MainThread:3858502 [wandb_init.py:_pause_backend():435] pausing backend
+2024-09-12 21:37:33,036 INFO    MainThread:3858502 [wandb_init.py:_resume_backend():440] resuming backend
+2024-09-12 21:37:33,039 INFO    MainThread:3858502 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-09-12 21:37:33,040 INFO    MainThread:3858502 [wandb_init.py:_pause_backend():435] pausing backend
+2024-09-12 21:38:13,111 INFO    MainThread:3858502 [wandb_init.py:_resume_backend():440] resuming backend
+2024-09-12 21:38:13,114 INFO    MainThread:3858502 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-09-12 21:38:13,115 INFO    MainThread:3858502 [wandb_init.py:_pause_backend():435] pausing backend
+2024-09-12 21:38:22,244 INFO    MainThread:3858502 [wandb_init.py:_resume_backend():440] resuming backend
+2024-09-12 21:38:22,247 INFO    MainThread:3858502 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-09-12 21:38:22,248 INFO    MainThread:3858502 [wandb_init.py:_pause_backend():435] pausing backend
+2024-09-12 21:38:36,190 INFO    MainThread:3858502 [wandb_init.py:_resume_backend():440] resuming backend
+2024-09-12 21:38:36,193 INFO    MainThread:3858502 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-09-12 21:38:36,194 INFO    MainThread:3858502 [wandb_init.py:_pause_backend():435] pausing backend
+2024-09-12 21:39:01,321 INFO    MainThread:3858502 [wandb_init.py:_resume_backend():440] resuming backend
+2024-09-12 21:39:01,326 INFO    MainThread:3858502 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-09-12 21:39:01,326 INFO    MainThread:3858502 [wandb_init.py:_pause_backend():435] pausing backend
+2024-09-12 21:40:07,637 INFO    MainThread:3858502 [wandb_init.py:_resume_backend():440] resuming backend
+2024-09-12 22:00:19,676 INFO    MainThread:3858502 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-09-12 22:00:19,676 INFO    MainThread:3858502 [wandb_init.py:_pause_backend():435] pausing backend
+2024-09-12 22:00:24,101 INFO    MainThread:3858502 [wandb_init.py:_resume_backend():440] resuming backend
+2024-09-12 22:00:24,108 INFO    MainThread:3858502 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-09-12 22:00:24,108 INFO    MainThread:3858502 [wandb_init.py:_pause_backend():435] pausing backend
+2024-09-12 22:00:26,428 INFO    MainThread:3858502 [wandb_init.py:_resume_backend():440] resuming backend
+2024-09-12 22:00:27,164 INFO    MainThread:3858502 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-09-12 22:00:27,164 INFO    MainThread:3858502 [wandb_init.py:_pause_backend():435] pausing backend
+2024-09-12 22:00:27,788 INFO    MainThread:3858502 [wandb_init.py:_resume_backend():440] resuming backend
+2024-09-12 22:00:28,567 INFO    MainThread:3858502 [wandb_setup.py:_flush():77] Current SDK version is 0.17.8
+2024-09-12 22:00:28,567 INFO    MainThread:3858502 [wandb_setup.py:_flush():77] Configure stats pid to 3858502
+2024-09-12 22:00:28,567 INFO    MainThread:3858502 [wandb_setup.py:_flush():77] Loading settings from /home/ray/.config/wandb/settings
+2024-09-12 22:00:28,567 INFO    MainThread:3858502 [wandb_setup.py:_flush():77] Loading settings from /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/settings
+2024-09-12 22:00:28,567 WARNING MainThread:3858502 [wandb_setup.py:_flush():77] Unknown environment variable: WANDB_POPULATE_RUN_LOCATION_HOOK
+2024-09-12 22:00:28,567 WARNING MainThread:3858502 [wandb_setup.py:_flush():77] Unknown environment variable: WANDB_SETUP_API_KEY_HOOK
+2024-09-12 22:00:28,567 WARNING MainThread:3858502 [wandb_setup.py:_flush():77] Unknown environment variable: WANDB_PROCESS_RUN_INFO_HOOK
+2024-09-12 22:00:28,567 INFO    MainThread:3858502 [wandb_setup.py:_flush():77] Loading settings from environment variables: {}
+2024-09-12 22:00:28,567 INFO    MainThread:3858502 [wandb_setup.py:_flush():77] Applying setup settings: {'_disable_service': False}
+2024-09-12 22:00:28,567 INFO    MainThread:3858502 [wandb_setup.py:_flush():77] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-09-12 22:00:28,567 INFO    MainThread:3858502 [wandb_setup.py:_flush():77] Applying login settings: {}
+2024-09-12 22:00:28,568 INFO    MainThread:3858502 [wandb_init.py:_log_setup():524] Logging user logs to /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/run-20240912_220028-srmicbr0/logs/debug.log
+2024-09-12 22:00:28,568 INFO    MainThread:3858502 [wandb_init.py:_log_setup():525] Logging internal logs to /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/run-20240912_220028-srmicbr0/logs/debug-internal.log
+2024-09-12 22:00:28,568 INFO    MainThread:3858502 [wandb_init.py:init():607] calling init triggers
+2024-09-12 22:00:28,568 INFO    MainThread:3858502 [wandb_init.py:init():614] wandb.init called with sweep_config: {}
+config: {'learning_rate': {0.0001}, 'step_size': {30}, 'epochs': {10}, 'optimizer_gamma': {0.1}}
+2024-09-12 22:00:28,568 INFO    MainThread:3858502 [wandb_init.py:init():632] re-initializing run, found existing run on stack: e6s60fss
+2024-09-12 22:00:28,571 INFO    MainThread:3858502 [wandb_run.py:_finish():2160] finishing run vannevar/ai-geolocation/e6s60fss
+2024-09-12 22:00:28,572 INFO    MainThread:3858502 [jupyter.py:save_history():444] not saving jupyter history
+2024-09-12 22:00:28,573 INFO    MainThread:3858502 [jupyter.py:save_ipynb():372] not saving jupyter notebook
+2024-09-12 22:00:28,573 INFO    MainThread:3858502 [wandb_init.py:_jupyter_teardown():452] cleaning up jupyter logic
+2024-09-12 22:00:28,573 INFO    MainThread:3858502 [wandb_run.py:_atexit_cleanup():2424] got exitcode: 0
+2024-09-12 22:00:28,574 INFO    MainThread:3858502 [wandb_run.py:_restore():2406] restore
+2024-09-12 22:00:28,575 INFO    MainThread:3858502 [wandb_run.py:_restore():2412] restore done
+2024-09-12 22:00:28,575 INFO    MainThread:3858502 [wandb_run.py:_on_finish():2677] communicating current version
+2024-09-12 22:00:28,641 INFO    MainThread:3858502 [wandb_run.py:_on_finish():2686] got version response upgrade_message: "wandb version 0.18.0 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-09-12 22:00:33,489 INFO    MainThread:3858502 [wandb_run.py:_footer_history_summary_info():4078] rendering history
+2024-09-12 22:00:33,490 INFO    MainThread:3858502 [wandb_run.py:_footer_history_summary_info():4110] rendering summary
+2024-09-12 22:00:33,496 INFO    MainThread:3858502 [wandb_run.py:_footer_sync_info():4037] logging synced files
