@@ -11,7 +11,7 @@ from PIL import Image
 from torchvision.transforms import ToPILImage
 
 class GeoCLIP(nn.Module):
-    def __init__(self, timestamp, from_pretrained=True, queue_size=4096):
+    def __init__(self, timestamp, epoch_num=0, from_pretrained=True, queue_size=4096):
         super().__init__()
         self.logit_scale = nn.Parameter(torch.ones([]) * np.log(1 / 0.07))
         self.image_encoder = ImageEncoder()
@@ -23,7 +23,7 @@ class GeoCLIP(nn.Module):
 
         if from_pretrained:
             self.weights_folder = os.path.join(file_dir, "weights")
-            self._load_weights(epochs=True)
+            self._load_weights(epoch_num=epoch_num, epochs=True)
 
         self.device = "cpu"
 
@@ -34,7 +34,7 @@ class GeoCLIP(nn.Module):
         self.logit_scale.data = self.logit_scale.data.to(device)
         return super().to(device)
 
-    def _load_weights(self, epochs=False):
+    def _load_weights(self, epoch_num=0, epochs=False):
         
         if self.timestamp:
             image_encoder_path = f"fine_tuned_image_encoder_mlp_weights_{self.timestamp}.pth"
@@ -46,9 +46,9 @@ class GeoCLIP(nn.Module):
             logit_scale_path = "logit_scale_weights.pth"
 
         if epochs:
-            self.image_encoder.mlp.load_state_dict(torch.load(f"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/snapshots/{image_encoder_path}"))
-            self.location_encoder.load_state_dict(torch.load(f"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/snapshots/{location_encoder_path}"))
-            self.logit_scale = nn.Parameter(torch.load(f"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/snapshots/{logit_scale_path}"))
+            self.image_encoder.mlp.load_state_dict(torch.load(f"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/snapshots/epoch_{epoch_num}/{image_encoder_path}"))
+            self.location_encoder.load_state_dict(torch.load(f"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/snapshots/epoch_{epoch_num}/{location_encoder_path}"))
+            self.logit_scale = nn.Parameter(torch.load(f"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/snapshots/epoch_{epoch_num}/{logit_scale_path}"))
         else:
             self.image_encoder.mlp.load_state_dict(torch.load(f"{self.weights_folder}/{image_encoder_path}"))
             self.location_encoder.load_state_dict(torch.load(f"{self.weights_folder}/{location_encoder_path}"))
