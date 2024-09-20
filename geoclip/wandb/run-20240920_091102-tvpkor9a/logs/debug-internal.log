@@ -9,3 +9,10 @@
 {"time":"2024-09-20T09:11:05.33631039Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"tvpkor9a"}}
 {"time":"2024-09-20T09:11:05.525538432Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
 {"time":"2024-09-20T09:11:05.526670605Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-20T10:54:51.329337771Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-09-20T10:54:51.32949198Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-09-20T10:54:53.641239241Z","level":"INFO","msg":"stream: closing","id":"tvpkor9a"}
+{"time":"2024-09-20T10:54:53.641266532Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"tvpkor9a"}}
+{"time":"2024-09-20T10:54:53.641302035Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"tvpkor9a"}}
+{"time":"2024-09-20T10:54:53.641348276Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"tvpkor9a"}}
+{"time":"2024-09-20T10:54:53.641384013Z","level":"INFO","msg":"stream: closed","id":"tvpkor9a"}

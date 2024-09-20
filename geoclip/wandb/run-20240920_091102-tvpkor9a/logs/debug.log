@@ -38,3 +38,10 @@ config: {'learning_rate': {0.0001}, 'step_size': {30}, 'epochs': {8}, 'optimizer
 2024-09-20 09:11:05,725 INFO    MainThread:2494436 [wandb_run.py:_redirect():2372] Wrapping output streams.
 2024-09-20 09:11:05,725 INFO    MainThread:2494436 [wandb_run.py:_redirect():2397] Redirects installed.
 2024-09-20 09:11:05,726 INFO    MainThread:2494436 [wandb_init.py:init():900] run started, returning control to user process
+2024-09-20 10:54:51,327 INFO    MainThread:2494436 [wandb_run.py:_finish():2158] finishing run vannevar/ai-geolocation/tvpkor9a
+2024-09-20 10:54:51,328 INFO    MainThread:2494436 [wandb_run.py:_atexit_cleanup():2422] got exitcode: 0
+2024-09-20 10:54:51,328 INFO    MainThread:2494436 [wandb_run.py:_restore():2404] restore
+2024-09-20 10:54:51,328 INFO    MainThread:2494436 [wandb_run.py:_restore():2410] restore done
+2024-09-20 10:54:53,632 INFO    MainThread:2494436 [wandb_run.py:_footer_history_summary_info():4037] rendering history
+2024-09-20 10:54:53,633 INFO    MainThread:2494436 [wandb_run.py:_footer_history_summary_info():4069] rendering summary
+2024-09-20 10:54:53,639 INFO    MainThread:2494436 [wandb_run.py:_footer_sync_info():3996] logging synced files

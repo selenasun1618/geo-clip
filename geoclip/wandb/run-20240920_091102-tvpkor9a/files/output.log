@@ -20,4 +20,5 @@ Starting Epoch 6
 Epoch 6 loss: 5.31503: 100%|██████████| 404/404 [17:17<00:00,  2.57s/it]
 Saved snapshot for epoch 6
 Starting Epoch 7
-Epoch 7 loss: 5.74460:  13%|█▎        | 54/404 [01:13<07:56,  1.36s/it]
+Epoch 7 loss: 5.14565: 100%|██████████| 404/404 [09:17<00:00,  1.38s/it]
+Saved snapshot for epoch 7
