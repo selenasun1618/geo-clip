@@ -1,0 +1,22 @@
+{"time":"2024-09-20T09:10:17.936182721Z","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-20T09:10:17.936199507Z","level":"INFO","msg":"created symlink","path":"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/run-20240920_091017-21pgn9a0/logs/debug-core.log"}
+{"time":"2024-09-20T09:10:17.936245671Z","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-20T09:10:17.936249832Z","level":"INFO","msg":"created symlink","path":"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/run-20240920_091017-21pgn9a0/logs/debug-core.log"}
+{"time":"2024-09-20T09:10:17.938590064Z","level":"INFO","msg":"created new stream","id":"21pgn9a0"}
+{"time":"2024-09-20T09:10:17.938609959Z","level":"INFO","msg":"stream: started","id":"21pgn9a0"}
+{"time":"2024-09-20T09:10:17.938630499Z","level":"INFO","msg":"handler: started","stream_id":{"value":"21pgn9a0"}}
+{"time":"2024-09-20T09:10:17.938631412Z","level":"INFO","msg":"sender: started","stream_id":{"value":"21pgn9a0"}}
+{"time":"2024-09-20T09:10:17.938624199Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"21pgn9a0"}}
+{"time":"2024-09-20T09:10:18.239923275Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-20T09:10:18.241551917Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-20T09:10:18.474156363Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-09-20T09:11:00.252614493Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-09-20T09:11:00.895841778Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-09-20T09:11:02.033780655Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-09-20T09:11:02.787706028Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-09-20T09:11:02.787908238Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-09-20T09:11:05.251866558Z","level":"INFO","msg":"stream: closing","id":"21pgn9a0"}
+{"time":"2024-09-20T09:11:05.251884227Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"21pgn9a0"}}
+{"time":"2024-09-20T09:11:05.251900865Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"21pgn9a0"}}
+{"time":"2024-09-20T09:11:05.251906844Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"21pgn9a0"}}
+{"time":"2024-09-20T09:11:05.251954102Z","level":"INFO","msg":"stream: closed","id":"21pgn9a0"}

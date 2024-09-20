@@ -1,0 +1,24 @@
+Starting Epoch 0
+Epoch 0 loss: 1.24082: 100%|██████████| 477/477 [10:50<00:00,  1.36s/it]
+Saved snapshot for epoch 0
+Starting Epoch 1
+Epoch 1 loss: 0.72225: 100%|██████████| 477/477 [10:51<00:00,  1.37s/it]
+Saved snapshot for epoch 1
+Starting Epoch 2
+Epoch 2 loss: 0.45803: 100%|██████████| 477/477 [10:51<00:00,  1.37s/it]
+Saved snapshot for epoch 2
+Starting Epoch 3
+Epoch 3 loss: 0.44683: 100%|██████████| 477/477 [10:50<00:00,  1.36s/it]
+Saved snapshot for epoch 3
+Starting Epoch 4
+Epoch 4 loss: 0.44835: 100%|██████████| 477/477 [10:51<00:00,  1.37s/it]
+Saved snapshot for epoch 4
+Starting Epoch 5
+Epoch 5 loss: 0.43868: 100%|██████████| 477/477 [10:51<00:00,  1.37s/it]
+Saved snapshot for epoch 5
+Starting Epoch 6
+Epoch 6 loss: 0.43765: 100%|██████████| 477/477 [10:50<00:00,  1.36s/it]
+Saved snapshot for epoch 6
+Starting Epoch 7
+Epoch 7 loss: 0.46932: 100%|██████████| 477/477 [23:30<00:00,  2.96s/it]
+Saved snapshot for epoch 7

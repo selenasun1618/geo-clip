@@ -1,0 +1,23 @@
+Starting Epoch 0
+Epoch 0 loss: 6.84619: 100%|██████████| 404/404 [20:14<00:00,  3.01s/it]
+Saved snapshot for epoch 0
+Starting Epoch 1
+Epoch 1 loss: 5.71138: 100%|██████████| 404/404 [10:47<00:00,  1.60s/it]
+Saved snapshot for epoch 1
+Starting Epoch 2
+Epoch 2 loss: 5.94197: 100%|██████████| 404/404 [09:10<00:00,  1.36s/it]
+Saved snapshot for epoch 2
+Starting Epoch 3
+Epoch 3 loss: 5.94787: 100%|██████████| 404/404 [09:09<00:00,  1.36s/it]
+Saved snapshot for epoch 3
+Starting Epoch 4
+Epoch 4 loss: 5.28309: 100%|██████████| 404/404 [10:36<00:00,  1.58s/it]
+Saved snapshot for epoch 4
+Starting Epoch 5
+Epoch 5 loss: 5.08625: 100%|██████████| 404/404 [17:06<00:00,  2.54s/it]
+Saved snapshot for epoch 5
+Starting Epoch 6
+Epoch 6 loss: 5.31503: 100%|██████████| 404/404 [17:17<00:00,  2.57s/it]
+Saved snapshot for epoch 6
+Starting Epoch 7
+Epoch 7 loss: 5.74460:  13%|█▎        | 54/404 [01:13<07:56,  1.36s/it]

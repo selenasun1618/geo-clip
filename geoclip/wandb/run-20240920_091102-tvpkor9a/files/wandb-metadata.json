@@ -1,0 +1,42 @@
+{
+  "os": "Linux-6.5.0-1023-aws-x86_64-with-glibc2.35",
+  "python": "3.11.8",
+  "startedAt": "2024-09-20T09:11:05.334107Z",
+  "program": "/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/finetuning_2.ipynb",
+  "git": {
+    "remote": "git@github.com:selenasun1618/geo-clip.git",
+    "commit": "bd3c5f865a57e688b6e1b6f3064d7520e2fec140"
+  },
+  "email": "selena.sun@vannevarlabs.com",
+  "root": "/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip",
+  "host": "ip-172-128-222-14",
+  "username": "ray",
+  "executable": "/home/ray/anaconda3/bin/python",
+  "codePathLocal": "finetuning_2.ipynb",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "gpu": "[Tesla T4]",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "155897610240",
+      "used": "42393448448"
+    }
+  },
+  "memory": {
+    "total": "66672680960"
+  },
+  "cpu": {
+    "count": 8,
+    "countLogical": 16
+  },
+  "gpu_nvidia": [
+    {
+      "name": "Tesla T4",
+      "memoryTotal": "16106127360",
+      "cudaCores": 2560,
+      "architecture": "Turing"
+    }
+  ],
+  "cudaVersion": "12.3"
+}

@@ -11,7 +11,7 @@ from PIL import Image
 from torchvision.transforms import ToPILImage
 
 class GeoCLIP(nn.Module):
-    def __init__(self, timestamp=None, epoch_num=0, from_pretrained=True, queue_size=4096):
+    def __init__(self, timestamp=None, epoch_num=0, epochs=False, from_pretrained=True, queue_size=4096):
         super().__init__()
         self.logit_scale = nn.Parameter(torch.ones([]) * np.log(1 / 0.07))
         self.image_encoder = ImageEncoder()
@@ -23,7 +23,7 @@ class GeoCLIP(nn.Module):
 
         if from_pretrained:
             self.weights_folder = os.path.join(file_dir, "weights")
-            self._load_weights(epoch_num=epoch_num, epochs=True)
+            self._load_weights(epoch_num=epoch_num, epochs=epochs)
 
         self.device = "cpu"
 
@@ -37,13 +37,20 @@ class GeoCLIP(nn.Module):
     def _load_weights(self, epoch_num=0, epochs=False):
         
         if self.timestamp:
-            image_encoder_path = f"fine_tuned_image_encoder_mlp_weights_{self.timestamp}.pth"
-            location_encoder_path = f"fine_tuned_location_encoder_weights_{self.timestamp}.pth"
-            logit_scale_path = f"fine_tuned_logit_scale_weights_{self.timestamp}.pth"
+            if epochs:
+                image_encoder_path = f"image_encoder_mlp_weights_{self.timestamp}.pth"
+                location_encoder_path = f"location_encoder_weights_{self.timestamp}.pth"
+                logit_scale_path = f"logit_scale_weights_{self.timestamp}.pth"
+            else:
+                image_encoder_path = f"fine_tuned_image_encoder_mlp_weights_{self.timestamp}.pth"
+                location_encoder_path = f"fine_tuned_location_encoder_weights_{self.timestamp}.pth"
+                logit_scale_path = f"fine_tuned_logit_scale_weights_{self.timestamp}.pth"
         else:
             image_encoder_path = "image_encoder_mlp_weights.pth"
             location_encoder_path = "location_encoder_weights.pth"
             logit_scale_path = "logit_scale_weights.pth"
+
+        print(f"Image Encoder Path: {image_encoder_path}\nLocation Encoder Path:{location_encoder_path}\nLogit Scale Path: {logit_scale_path}")
 
         if epochs:
             self.image_encoder.mlp.load_state_dict(torch.load(f"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/snapshots/epoch_{epoch_num}/{image_encoder_path}"))

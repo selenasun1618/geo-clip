@@ -1,0 +1,40 @@
+2024-09-20 09:11:02,783 INFO    MainThread:2494436 [wandb_setup.py:_flush():77] Current SDK version is 0.18.1
+2024-09-20 09:11:02,784 INFO    MainThread:2494436 [wandb_setup.py:_flush():77] Configure stats pid to 2494436
+2024-09-20 09:11:02,784 INFO    MainThread:2494436 [wandb_setup.py:_flush():77] Loading settings from /home/ray/.config/wandb/settings
+2024-09-20 09:11:02,784 INFO    MainThread:2494436 [wandb_setup.py:_flush():77] Loading settings from /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/settings
+2024-09-20 09:11:02,784 WARNING MainThread:2494436 [wandb_setup.py:_flush():77] Unknown environment variable: WANDB_POPULATE_RUN_LOCATION_HOOK
+2024-09-20 09:11:02,784 WARNING MainThread:2494436 [wandb_setup.py:_flush():77] Unknown environment variable: WANDB_SETUP_API_KEY_HOOK
+2024-09-20 09:11:02,784 WARNING MainThread:2494436 [wandb_setup.py:_flush():77] Unknown environment variable: WANDB_PROCESS_RUN_INFO_HOOK
+2024-09-20 09:11:02,784 INFO    MainThread:2494436 [wandb_setup.py:_flush():77] Loading settings from environment variables: {}
+2024-09-20 09:11:02,784 INFO    MainThread:2494436 [wandb_setup.py:_flush():77] Applying setup settings: {'mode': None, '_disable_service': None}
+2024-09-20 09:11:02,784 INFO    MainThread:2494436 [wandb_setup.py:_flush():77] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-09-20 09:11:02,784 INFO    MainThread:2494436 [wandb_setup.py:_flush():77] Applying login settings: {}
+2024-09-20 09:11:02,784 INFO    MainThread:2494436 [wandb_init.py:_log_setup():532] Logging user logs to /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/run-20240920_091102-tvpkor9a/logs/debug.log
+2024-09-20 09:11:02,784 INFO    MainThread:2494436 [wandb_init.py:_log_setup():533] Logging internal logs to /home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/run-20240920_091102-tvpkor9a/logs/debug-internal.log
+2024-09-20 09:11:02,784 INFO    MainThread:2494436 [wandb_init.py:init():616] calling init triggers
+2024-09-20 09:11:02,784 INFO    MainThread:2494436 [wandb_init.py:init():623] wandb.init called with sweep_config: {}
+config: {'learning_rate': {0.0001}, 'step_size': {30}, 'epochs': {8}, 'optimizer_gamma': {0.1}}
+2024-09-20 09:11:02,784 INFO    MainThread:2494436 [wandb_init.py:init():641] re-initializing run, found existing run on stack: 21pgn9a0
+2024-09-20 09:11:02,786 INFO    MainThread:2494436 [wandb_run.py:_finish():2158] finishing run vannevar/ai-geolocation/21pgn9a0
+2024-09-20 09:11:02,786 INFO    MainThread:2494436 [jupyter.py:save_history():459] not saving jupyter history
+2024-09-20 09:11:02,786 INFO    MainThread:2494436 [jupyter.py:save_ipynb():387] not saving jupyter notebook
+2024-09-20 09:11:02,786 INFO    MainThread:2494436 [wandb_init.py:_jupyter_teardown():460] cleaning up jupyter logic
+2024-09-20 09:11:02,786 INFO    MainThread:2494436 [wandb_run.py:_atexit_cleanup():2422] got exitcode: 0
+2024-09-20 09:11:02,787 INFO    MainThread:2494436 [wandb_run.py:_restore():2404] restore
+2024-09-20 09:11:02,787 INFO    MainThread:2494436 [wandb_run.py:_restore():2410] restore done
+2024-09-20 09:11:05,245 INFO    MainThread:2494436 [wandb_run.py:_footer_history_summary_info():4037] rendering history
+2024-09-20 09:11:05,245 INFO    MainThread:2494436 [wandb_run.py:_footer_history_summary_info():4069] rendering summary
+2024-09-20 09:11:05,249 INFO    MainThread:2494436 [wandb_run.py:_footer_sync_info():3996] logging synced files
+2024-09-20 09:11:05,330 INFO    MainThread:2494436 [wandb_init.py:init():666] starting backend
+2024-09-20 09:11:05,330 INFO    MainThread:2494436 [wandb_init.py:init():670] setting up manager
+2024-09-20 09:11:05,333 INFO    MainThread:2494436 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-09-20 09:11:05,333 INFO    MainThread:2494436 [wandb_init.py:init():678] backend started and connected
+2024-09-20 09:11:05,336 INFO    MainThread:2494436 [wandb_run.py:_label_probe_notebook():1340] probe notebook
+2024-09-20 09:11:05,336 INFO    MainThread:2494436 [wandb_init.py:init():773] updated telemetry
+2024-09-20 09:11:05,359 INFO    MainThread:2494436 [wandb_init.py:init():806] communicating run to backend with 90.0 second timeout
+2024-09-20 09:11:05,518 INFO    MainThread:2494436 [wandb_init.py:init():857] starting run threads in backend
+2024-09-20 09:11:05,724 INFO    MainThread:2494436 [wandb_run.py:_console_start():2459] atexit reg
+2024-09-20 09:11:05,725 INFO    MainThread:2494436 [wandb_run.py:_redirect():2307] redirect: wrap_raw
+2024-09-20 09:11:05,725 INFO    MainThread:2494436 [wandb_run.py:_redirect():2372] Wrapping output streams.
+2024-09-20 09:11:05,725 INFO    MainThread:2494436 [wandb_run.py:_redirect():2397] Redirects installed.
+2024-09-20 09:11:05,726 INFO    MainThread:2494436 [wandb_init.py:init():900] run started, returning control to user process

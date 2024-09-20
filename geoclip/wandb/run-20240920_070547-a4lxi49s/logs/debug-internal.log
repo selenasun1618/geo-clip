@@ -1,0 +1,20 @@
+{"time":"2024-09-20T07:05:47.361418008Z","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-20T07:05:47.361434316Z","level":"INFO","msg":"created symlink","path":"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/run-20240920_070547-a4lxi49s/logs/debug-core.log"}
+{"time":"2024-09-20T07:05:47.361496352Z","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-20T07:05:47.361501042Z","level":"INFO","msg":"created symlink","path":"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/run-20240920_070547-a4lxi49s/logs/debug-core.log"}
+{"time":"2024-09-20T07:05:47.363915817Z","level":"INFO","msg":"created new stream","id":"a4lxi49s"}
+{"time":"2024-09-20T07:05:47.363940236Z","level":"INFO","msg":"stream: started","id":"a4lxi49s"}
+{"time":"2024-09-20T07:05:47.36396693Z","level":"INFO","msg":"handler: started","stream_id":{"value":"a4lxi49s"}}
+{"time":"2024-09-20T07:05:47.363952679Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"a4lxi49s"}}
+{"time":"2024-09-20T07:05:47.363964087Z","level":"INFO","msg":"sender: started","stream_id":{"value":"a4lxi49s"}}
+{"time":"2024-09-20T07:05:47.55327956Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-20T07:05:47.554634207Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-20T07:18:06.774090673Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-09-20T07:54:44.45239509Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-09-20T07:54:45.214172282Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-09-20T07:54:45.214336061Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-09-20T07:54:47.560941337Z","level":"INFO","msg":"stream: closing","id":"a4lxi49s"}
+{"time":"2024-09-20T07:54:47.560962056Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"a4lxi49s"}}
+{"time":"2024-09-20T07:54:47.560985728Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"a4lxi49s"}}
+{"time":"2024-09-20T07:54:47.560986868Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"a4lxi49s"}}
+{"time":"2024-09-20T07:54:47.561087037Z","level":"INFO","msg":"stream: closed","id":"a4lxi49s"}

@@ -1,0 +1,11 @@
+{"time":"2024-09-20T09:11:05.333791217Z","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-20T09:11:05.333809761Z","level":"INFO","msg":"created symlink","path":"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/run-20240920_091102-tvpkor9a/logs/debug-core.log"}
+{"time":"2024-09-20T09:11:05.333853364Z","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-20T09:11:05.333857731Z","level":"INFO","msg":"created symlink","path":"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/run-20240920_091102-tvpkor9a/logs/debug-core.log"}
+{"time":"2024-09-20T09:11:05.336273529Z","level":"INFO","msg":"created new stream","id":"tvpkor9a"}
+{"time":"2024-09-20T09:11:05.336294782Z","level":"INFO","msg":"stream: started","id":"tvpkor9a"}
+{"time":"2024-09-20T09:11:05.336314217Z","level":"INFO","msg":"handler: started","stream_id":{"value":"tvpkor9a"}}
+{"time":"2024-09-20T09:11:05.336313149Z","level":"INFO","msg":"sender: started","stream_id":{"value":"tvpkor9a"}}
+{"time":"2024-09-20T09:11:05.33631039Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"tvpkor9a"}}
+{"time":"2024-09-20T09:11:05.525538432Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-20T09:11:05.526670605Z","level":"INFO","msg":"Starting system monitor"}

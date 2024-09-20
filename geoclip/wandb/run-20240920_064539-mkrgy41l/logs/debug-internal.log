@@ -1,0 +1,20 @@
+{"time":"2024-09-20T06:45:40.015571048Z","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-20T06:45:40.016167548Z","level":"INFO","msg":"created symlink","path":"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/run-20240920_064539-mkrgy41l/logs/debug-core.log"}
+{"time":"2024-09-20T06:45:40.016874329Z","level":"INFO","msg":"using version","core version":"0.18.1"}
+{"time":"2024-09-20T06:45:40.017694886Z","level":"INFO","msg":"created symlink","path":"/home/ray/mnt/cluster_storage/ai_geolocation/geo-clip/geoclip/wandb/run-20240920_064539-mkrgy41l/logs/debug-core.log"}
+{"time":"2024-09-20T06:45:40.022522446Z","level":"INFO","msg":"created new stream","id":"mkrgy41l"}
+{"time":"2024-09-20T06:45:40.023056678Z","level":"INFO","msg":"stream: started","id":"mkrgy41l"}
+{"time":"2024-09-20T06:45:40.023071564Z","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"mkrgy41l"}}
+{"time":"2024-09-20T06:45:40.023098966Z","level":"INFO","msg":"handler: started","stream_id":{"value":"mkrgy41l"}}
+{"time":"2024-09-20T06:45:40.023112099Z","level":"INFO","msg":"sender: started","stream_id":{"value":"mkrgy41l"}}
+{"time":"2024-09-20T06:45:40.280812033Z","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-09-20T06:45:40.282573054Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-09-20T06:45:41.481260781Z","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-09-20T06:46:38.25417742Z","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-09-20T06:46:39.028473797Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-09-20T06:46:39.028807565Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-09-20T06:46:41.508528854Z","level":"INFO","msg":"stream: closing","id":"mkrgy41l"}
+{"time":"2024-09-20T06:46:41.508700973Z","level":"INFO","msg":"handler: closed","stream_id":{"value":"mkrgy41l"}}
+{"time":"2024-09-20T06:46:41.508763422Z","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"mkrgy41l"}}
+{"time":"2024-09-20T06:46:41.508874422Z","level":"INFO","msg":"sender: closed","stream_id":{"value":"mkrgy41l"}}
+{"time":"2024-09-20T06:46:41.508903479Z","level":"INFO","msg":"stream: closed","id":"mkrgy41l"}
